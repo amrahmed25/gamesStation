@@ -1,0 +1,228 @@
+:root{
+    --web-ground:rgb(3, 4, 94) ;
+    --button-color:rgb(0, 180, 216);
+    --section-color:rgb(0, 119, 182);
+    --text-color:rgb(202, 240, 248);
+    --cards-color:rgb(144, 224, 239);
+}
+
+
+
+
+nav{
+    display: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000px;
+    top: 0;
+    left: 0;
+    background-color: var(--web-ground);
+    h1{
+        color: var(--text-color);
+        padding-left: 10px;
+    }
+}
+.navLinks{
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    padding-left: 10px;
+    color: var(--text-color);
+}
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: var(--section-color);
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            color: var(--text-color);
+        }
+        .h1{
+            color: var(--text-color);
+        }
+        .develop{
+            color:var(--button-color);
+        }
+    }
+    label{
+        h1{
+            display:inline;
+            padding-left: 10px;
+        }
+    }
+    button{
+    background-color: var(--button-color);
+    border-radius: 10px;
+    width: 180px;
+    margin: 10px; 
+    cursor: pointer;
+    padding: 10px;
+    }   
+    button:hover{
+        background-color: var(--section-color);
+        width:200px;
+    }
+}
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    background-color: var(--web-ground);
+    h1{
+        color: var(--text-color);
+    }
+    p{
+        color: var(--text-color);
+    }
+}
+#games {
+    background-color: var(--section-color);
+
+    .gameTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: var(--text-color);
+        }
+
+        p {
+            color: var(--text-color);
+        }
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .game-card {
+            width: 400px;
+            height: 450px;
+            margin: 20px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+        }
+
+        .game-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            border-radius: 10px;
+            backface-visibility: hidden;
+        }
+
+        .card-front {
+            div{
+                img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            }
+            
+            background-color: var(--button-color);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+
+            h1 {
+                color: var(--text-color);
+            }
+
+            p {
+                color: var(--text-color);
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            a {
+                color: var(--web-ground);
+            }
+        }
+
+        .card-back {
+            background-color: var(--button-color);
+            color: var(--text-color);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding: 30px;
+            box-sizing: border-box;
+
+            transform: rotateY(180deg);
+
+            h1 {
+                color: var(--text-color);
+            }
+
+            p {
+                color: var(--text-color);
+                text-align: center;
+            }
+
+            a {
+                color: var(--web-ground);
+            }
+        }
+    }
+}
+footer{
+    background-color:var(--web-ground);
+    
+    padding: 10px;
+    a{
+        color: blueviolet;
+    }
+    p{
+        color: var(--text-color);
+        padding-left: 20px;
+    }
+}
