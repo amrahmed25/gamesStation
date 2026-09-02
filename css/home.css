@@ -7,7 +7,7 @@
 }
 * {
     margin: 0;
-    
+    font-family: "Inter", sans-serif;   
     box-sizing: border-box;
 }
 
@@ -45,9 +45,16 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    position: relative;
     height: 80vh;
-    background-color: var(--section-color);
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.40)),
+        url('../images/nostalgia.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     section {
         display: flex;
@@ -218,12 +225,7 @@ a {
             }
 
 
-            a {
-                color: var(--web-ground);
-
-                margin-top: auto;
-                margin-bottom: 20px;
-            }
+            
         }
 
 
@@ -248,7 +250,7 @@ a {
 
             h1 {
                 color: var(--text-color);
-                padding-bottom: 100px;
+                padding-bottom: 50px;
                 padding-top: 30px;
             }
 
@@ -261,7 +263,13 @@ a {
 
 
             a {
-                color: var(--web-ground);
+                color: #1c0fa6;
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: #F5E6C8;
+                padding: 10px;
+                border-radius: 10px;
             }
         }
     }
