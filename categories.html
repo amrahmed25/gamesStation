@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <title>Categories</title>
 </head>
-
 <body>
     <nav>
         <h1>Nostalgia</h1>
@@ -17,47 +16,19 @@
             <a href="feedback.html">feedback</a>
         </section>
     </nav>
-    <div id="home">
-
-        <section>
-
-            <p>WELCOME TO NOSTALGIA</p>
-
-            <section class="h1">
-                <label>
-                    <h1>Play.</h1>
-                    <h1 class="develop">Remember.</h1>
-                    <h1>Relive.</h1>
-                </label>
-            </section>
-
-            <p>
-                Discover classic games, revisit unforgettable memories,
-                and relive the games that made your childhood special.
-            </p>
-
-            <button>
-                <a href="#games">Explore Games</a>
-            </button>
-
-        </section>
-
+    <div id="containerFilter">
+        <div>
+            <select id="categories">
+                <option value="all">All</option>
+                <option value="shooter">Shooter</option>
+                <option value="adventure">Adventure</option>
+                <option value="casual">Casual</option>
+            </select>
+            <input id="gameQuery" type="text" placeholder="Find a game" autofocus>
+            <button onclick="searchGame()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
     </div>
-
-
-    <div id="about">
-
-        <h1>
-            About Nostalgia
-        </h1>
-
-        <p>
-            Nostalgia is a place where classic games and unforgettable memories
-            come back to life. Explore legendary games, discover their stories,
-            and relive the moments that made them special.
-        </p>
-
-    </div>
+    <p id="placeWrite" style="font-size: 2rem;"></p>
     <div id="games">
         <div class="gameTitle">
             <h1>
@@ -75,12 +46,12 @@
                             <img src="images/pubg.jpg" alt="">
                         </div>
 
-                        <h1>PUBG</h1>
+                        <h1 class="card-front-p">PUBG</h1>
                     </div>
 
 
                     <div class="card-back">
-                        <h1>PUBG_Mobile</h1>
+                        <h1>PUBG</h1>
                         <p>
                             Battle players from around the world in an intense survival experience.
                             Collect weapons, build strategies, and be the last player standing.
@@ -99,7 +70,7 @@
                             <img src="images/CF.jpg" alt="">
                         </div>
 
-                        <h1>CrossFire</h1>
+                        <h1 class="card-front-p">CrossFire</h1>
                     </div>
 
 
@@ -123,12 +94,12 @@
                             <img src="images/Super-Mario.webp" alt="">
                         </div>
 
-                        <h1>Super-Mario</h1>
+                        <h1 class="card-front-p">Super Mario</h1>
                     </div>
 
 
                     <div class="card-back">
-                        <h1>Super-Mario</h1>
+                        <h1>Super Mario</h1>
                         <p>
                             Join Mario on exciting adventures through colorful and challenging worlds.
                             Jump, explore, defeat enemies, and save the Mushroom Kingdom.
@@ -146,7 +117,7 @@
                         <div>
                             <img src="images/gta.jpg" alt="">
                         </div>
-                        <h1>GTA</h1>
+                        <h1 class="card-front-p">GTA</h1>
 
 
 
@@ -173,12 +144,12 @@
                             <img src="images/funnyFarm.jpg" alt="">
                         </div>
 
-                        <h1>Happy_Farm</h1>
+                        <h1 class="card-front-p">Happy Farm</h1>
                     </div>
 
 
                     <div class="card-back">
-                        <h1>Happy_Farm</h1>
+                        <h1>Happy Farm</h1>
                         <p>
                             Build and manage your own farm in a fun and relaxing experience.
                             Grow crops, take care of animals, and create your dream farm.
@@ -192,8 +163,7 @@
     </div>
     <footer>
         <p> &copy; 2026 Nostalgia. All Rights Reserved. </p>
-    </footer>
-
+    </footer>    
+    <script src="js/categories.js"></script>
 </body>
-
 </html>
