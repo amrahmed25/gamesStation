@@ -109,19 +109,28 @@ nav {
   color: rgba(245, 230, 200, 0.55);
   margin: 8px 0 0;
 }
-
-.select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="%23F5E6C8" stroke-width="1.5"><path d="M5.5 7.5l4.5 4.5 4.5-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  padding-right: 40px;
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  font-family: inherit;
+}
+ 
+.submit-btn:hover {
+  filter: brightness(1.1);
 }
 
-.attach-field {
-  margin-bottom: 32px;
-}
 
 a {
     text-decoration: none;
@@ -138,4 +147,13 @@ footer {
 
         padding-left: 20px;
     }
+}
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 20px;
+  }
+ 
+  .title {
+    font-size: 22px;
+  }
 }
