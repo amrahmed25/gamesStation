@@ -36,6 +36,10 @@ nav {
     padding-left: 10px;
     color: var(--text-color);
 }
+a:hover{
+    font-size: 18px;
+    transition: ease;
+}
     a:focus{
         text-decoration: underline;
 
