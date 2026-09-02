@@ -104,55 +104,19 @@ body {
   margin-bottom: 32px;
 }
 
-.attach-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: none;
-  border: none;
-  color: var(--cards-color);
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0;
+a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: var(--text-color);
 }
 
-.attach-btn:hover {
-  opacity: 0.85;
-}
+footer {
+    background-color: var(--web-ground);
 
-.submit-btn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background-color: var(--button-color);
-  color: var(--text-color);
-  border: none;
-  border-radius: 8px;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: filter 0.2s ease;
-  font-family: inherit;
-}
+    padding: 25px;
+    p {
+        color: var(--text-color);
 
-.submit-btn:hover {
-  filter: brightness(1.1);
-}
-
-.icon {
-  flex-shrink: 0;
-}
-
-@media (max-width: 480px) {
-  .card {
-    padding: 28px 20px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
+        padding-left: 20px;
+    }
 }
