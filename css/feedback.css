@@ -16,7 +16,26 @@ body {
   background-color: var(--web-ground);
   color: var(--text-color);
 }
+nav {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    width: 100%;
+    
+
+    background-color: var(--web-ground);
+
+    h1 {
+        color: var(--text-color);
+        padding-left: 10px;
+    }
+}
+
+.navLinks {
+    padding: 25px;
+}
 .page {
   min-height: 100vh;
   width: 100%;
