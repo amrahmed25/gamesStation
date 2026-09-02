@@ -32,6 +32,15 @@ nav {
 
 .navLinks {
     padding: 25px;
+    a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: var(--text-color);
+}
+    a:focus{
+        text-decoration: underline;
+
+    }
 }
 
 a {

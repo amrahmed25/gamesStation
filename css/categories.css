@@ -7,9 +7,10 @@
 }
 * {
     margin: 0;
-    
+    font-family: "Inter", sans-serif;
     box-sizing: border-box;
 }
+
 
 nav {
     
@@ -30,6 +31,15 @@ nav {
 
 .navLinks {
     padding: 25px;
+    a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: var(--text-color);
+}
+    a:focus{
+        text-decoration: underline;
+
+    }
 }
 
 a {
@@ -51,7 +61,7 @@ a {
             height: 3.5rem;
         }
         select{
-            width: 7rem;
+            
             color: #1B1B2F;
             opacity: 0.8;
             background-color: #E5E7EB;
@@ -117,8 +127,7 @@ a {
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 1600px;
-        height: 800px;
+        
         .game-card {
             width: 400px;
             height: 350px;
@@ -241,7 +250,13 @@ a {
 
 
             a {
-                color: var(--web-ground);
+                color: #1c0fa6;
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: #F5E6C8;
+                padding: 10px;
+                border-radius: 10px;
             }
         }
     }
