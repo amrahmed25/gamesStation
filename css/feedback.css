@@ -1,50 +1,158 @@
 :root {
-    --web-ground: #1B1B2F;
-    --button-color: #811628;
-    --section-color: #162447;
-    --text-color: #F5E6C8;
-    --cards-color: #FFB703;
+  --web-ground: #1B1B2F;
+  --button-color: #811628;
+  --section-color: #162447;
+  --text-color: #F5E6C8;
+  --cards-color: #FFB703;
 }
+
 * {
-    margin: 0;
-    
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-nav {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    
-
-    background-color: var(--web-ground);
-
-    h1 {
-        color: var(--text-color);
-        padding-left: 10px;
-    }
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--web-ground);
+  color: var(--text-color);
 }
 
-.navLinks {
-    padding: 25px;
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
 }
 
-a {
-    text-decoration: none;
-    padding-left: 10px;
-    color: var(--text-color);
+.card {
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--section-color);
+  border-radius: 16px;
+  padding: 40px 32px;
 }
 
-footer {
-    background-color: var(--web-ground);
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--cards-color);
+  margin: 0 0 32px;
+}
 
-    padding: 25px;
-    p {
-        color: var(--text-color);
+.field {
+  margin-bottom: 24px;
+}
 
-        padding-left: 20px;
-    }
+.label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  background-color: var(--web-ground);
+  border: 1px solid rgba(245, 230, 200, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(245, 230, 200, 0.45);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: var(--cards-color);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.char-remaining {
+  text-align: right;
+  font-size: 13px;
+  color: rgba(245, 230, 200, 0.55);
+  margin: 8px 0 0;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" stroke="%23F5E6C8" stroke-width="1.5"><path d="M5.5 7.5l4.5 4.5 4.5-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.attach-field {
+  margin-bottom: 32px;
+}
+
+.attach-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--cards-color);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.attach-btn:hover {
+  opacity: 0.85;
+}
+
+.submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  font-family: inherit;
+}
+
+.submit-btn:hover {
+  filter: brightness(1.1);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
 }
